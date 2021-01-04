@@ -38,8 +38,9 @@ async def on_message(m):
 		await m.delete()
 		c = 0
 		async for msg in m.channel.history(limit=None):
-			if msg.author == client.user: await msg.delete()
-			c += 1
+			if msg.author == client.user:
+				await msg.delete()
+				c += 1
 		print('[+] done deleting ' + str(c) + ' messages')
 
 
