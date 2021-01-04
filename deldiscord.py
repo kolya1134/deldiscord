@@ -9,7 +9,7 @@ async def on_ready():
 	print("[+] " + client.user.name + " logged in")
 	if len(sys.argv) > 1:
 		for channelid in sys.argv[1:]:
-			if !channelid.isdigit(): continue
+			if not channelid.isdigit(): continue
 
 			channel = client.get_channel(int(channelid))
 			if channel != None: name = channel.name
